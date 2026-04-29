@@ -264,29 +264,213 @@ footer ul li a:hover{color:var(--gold)}
     <div><div class="section-label">What We Offer</div><div class="section-title">Our Services</div></div>
     <a href="https://clienthub.getjobber.com/hubs/4ad0e7fe-b427-407f-9be5-d461f59fa8a8/public/requests/2537886/new" target="_blank" class="view-all">Get a Quote &#8594;</a>
   </div>
-  <div class="services-grid">
-    <div class="svc-card">
-      <div class="svc-img"><div class="svc-img-placeholder"><span>RECURRING</span></div><div class="svc-tag">Most Popular</div></div>
-      <div class="svc-body"><h3>Recurring Cleaning</h3><p>Weekly, bi-weekly, or monthly visits. Same team, consistent results. Lock in your rate and never think about it again.</p><div class="svc-price">Starting at $60/bedroom</div><a href="https://clienthub.getjobber.com/hubs/4ad0e7fe-b427-407f-9be5-d461f59fa8a8/public/requests/2537886/new" target="_blank" class="svc-btn">Book This Service</a></div>
+
+  <style>
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
+  .tier-card{background:var(--white);border:1px solid var(--ash);border-radius:12px;padding:28px;display:flex;flex-direction:column}
+  .tier-card.featured{border:2px solid var(--gold)}
+  .tier-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:var(--gold-pale);color:var(--gold);margin-bottom:10px;width:fit-content}
+  .tier-name{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.06em;color:var(--ink);margin-bottom:2px}
+  .tier-time{font-size:11px;color:var(--mid);margin-bottom:12px}
+  .tier-from{font-size:28px;font-weight:700;color:var(--ink);margin-bottom:2px;font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em}
+  .tier-from-label{font-size:10px;color:var(--mid);margin-bottom:14px}
+  .price-tbl{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:14px}
+  .price-tbl th{text-align:left;font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--mid);padding:0 4px 6px;border-bottom:1px solid var(--ash)}
+  .price-tbl td{padding:5px 4px;color:var(--ink);border-bottom:1px solid var(--smoke)}
+  .price-tbl tr:last-child td{border-bottom:none}
+  .price-tbl td:last-child{text-align:right;font-weight:600}
+  .incl-label{font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--mid);margin:12px 0 7px}
+  .incl-row{display:flex;align-items:flex-start;gap:7px;font-size:12px;line-height:1.45;color:var(--ink);margin-bottom:5px}
+  .incl-row.no{color:var(--mid)}
+  .chk{width:14px;height:14px;flex-shrink:0;margin-top:1px}
+  .chk-yes{color:#22c55e}
+  .chk-no{color:#d1d5db}
+  .tier-divider{border:none;border-top:1px solid var(--ash);margin:10px 0}
+  .addons-box{background:var(--smoke);border-radius:8px;padding:10px 12px;margin-top:auto;margin-bottom:0}
+  .addons-box-title{font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--mid);margin-bottom:7px}
+  .addon-line{display:flex;justify-content:space-between;font-size:12px;color:var(--ink);padding:3px 0;border-bottom:1px solid var(--ash)}
+  .addon-line:last-child{border-bottom:none}
+  .addon-line span:last-child{font-weight:600}
+  .tier-btn{display:block;text-align:center;margin-top:12px;padding:9px 0;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;border:1.5px solid var(--ink);border-radius:6px;color:var(--ink);background:transparent;text-decoration:none;transition:background 0.2s}
+  .tier-btn:hover{background:var(--ink);color:var(--white)}
+  .tier-btn.featured-btn{background:var(--gold);border-color:var(--gold);color:var(--white)}
+  .tier-btn.featured-btn:hover{background:var(--gold2);border-color:var(--gold2)}
+  @media(max-width:768px){.pricing-grid{grid-template-columns:1fr}}
+  </style>
+
+  <div class="pricing-grid">
+
+    <div class="tier-card">
+      <p class="tier-name">Standard Clean</p>
+      <p class="tier-time">2–3 hrs &middot; recurring maintenance</p>
+      <p class="tier-from">From $129</p>
+      <p class="tier-from-label">*starting price, scales by home size</p>
+      <table class="price-tbl">
+        <thead><tr><th>Home size</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>1 bed / 1 bath</td><td>$129</td></tr>
+          <tr><td>2 bed / 1 bath</td><td>$169</td></tr>
+          <tr><td>2 bed / 2 bath</td><td>$219</td></tr>
+          <tr><td>3 bed / 2 bath</td><td>$269</td></tr>
+          <tr><td>3 bed / 3 bath</td><td>$329</td></tr>
+          <tr><td>4 bed / 2 bath</td><td>$299</td></tr>
+          <tr><td>4 bed / 3 bath</td><td>$349</td></tr>
+          <tr><td>4 bed / 4 bath</td><td>$389</td></tr>
+        </tbody>
+      </table>
+      <p class="incl-label">General</p>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Dust lamps, shades &amp; picture frames</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Dust furniture, window sills &amp; vents</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean mirrors and all surfaces</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Vacuum, sweep &amp; mop all floors</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Empty trash &amp; replace liners</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Remove cobwebs</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Make beds (linen change on request)</div>
+      <hr class="tier-divider">
+      <p class="incl-label">Kitchen</p>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean appliance exteriors</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean microwave inside &amp; out</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Disinfect counters, backsplash &amp; sinks</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean table, chairs &amp; cabinet exteriors</div>
+      <div class="incl-row no"><svg class="chk chk-no" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".1"/><path d="M5.5 10.5l5-5M10.5 10.5l-5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>Inside fridge, oven, or cabinets</div>
+      <hr class="tier-divider">
+      <p class="incl-label">Bathroom</p>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Scrub tub, shower &amp; toilet</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean vanity, sinks &amp; faucets</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Fold &amp; hang towels neatly</div>
+      <div class="incl-row no"><svg class="chk chk-no" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".1"/><path d="M5.5 10.5l5-5M10.5 10.5l-5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>Heavy scrub of tile &amp; grout</div>
+      <hr class="tier-divider">
+      <p class="incl-label">Deep &amp; Move-Out Only</p>
+      <div class="incl-row no"><svg class="chk chk-no" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".1"/><path d="M5.5 10.5l5-5M10.5 10.5l-5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>Baseboards &amp; wall marks</div>
+      <div class="incl-row no"><svg class="chk chk-no" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".1"/><path d="M5.5 10.5l5-5M10.5 10.5l-5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>Doorframes &amp; light switches</div>
+      <div class="incl-row no"><svg class="chk chk-no" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".1"/><path d="M5.5 10.5l5-5M10.5 10.5l-5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>Interior windows (up to 10)</div>
+      <div class="incl-row no"><svg class="chk chk-no" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".1"/><path d="M5.5 10.5l5-5M10.5 10.5l-5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>Garage &amp; basement sweep</div>
+      <div class="addons-box">
+        <p class="addons-box-title">Available Add-Ons</p>
+        <div class="addon-line"><span>Inside oven</span><span>+$50</span></div>
+        <div class="addon-line"><span>Inside refrigerator</span><span>+$50</span></div>
+        <div class="addon-line"><span>Inside cabinets &amp; drawers</span><span>+$65</span></div>
+        <div class="addon-line"><span>Laundry (wash, dry &amp; fold)</span><span>+$20/load</span></div>
+      </div>
+      <a href="https://clienthub.getjobber.com/hubs/4ad0e7fe-b427-407f-9be5-d461f59fa8a8/public/requests/2537886/new" target="_blank" class="tier-btn">Book a Standard Clean</a>
     </div>
-    <div class="svc-card">
-      <div class="svc-img"><div class="svc-img-placeholder"><span>MOVE IN/OUT</span></div></div>
-      <div class="svc-body"><h3>Move-In / Move-Out</h3><p>Deep clean for a fresh start. Cabinets, appliances, baseboards, windows - the full treatment so your deposit comes back.</p><div class="svc-price">Custom quote</div><a href="https://clienthub.getjobber.com/hubs/4ad0e7fe-b427-407f-9be5-d461f59fa8a8/public/requests/2537886/new" target="_blank" class="svc-btn">Book This Service</a></div>
+
+    <div class="tier-card featured">
+      <span class="tier-badge">Most Popular</span>
+      <p class="tier-name">Deep Clean</p>
+      <p class="tier-time">3–5 hrs &middot; seasonal reset or first clean</p>
+      <p class="tier-from">From $189</p>
+      <p class="tier-from-label">*starting price, scales by home size</p>
+      <table class="price-tbl">
+        <thead><tr><th>Home size</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>1 bed / 1 bath</td><td>$189</td></tr>
+          <tr><td>2 bed / 1 bath</td><td>$239</td></tr>
+          <tr><td>2 bed / 2 bath</td><td>$289</td></tr>
+          <tr><td>3 bed / 2 bath</td><td>$349</td></tr>
+          <tr><td>3 bed / 3 bath</td><td>$409</td></tr>
+          <tr><td>4 bed / 2 bath</td><td>$379</td></tr>
+          <tr><td>4 bed / 3 bath</td><td>$429</td></tr>
+          <tr><td>4 bed / 4 bath</td><td>$479</td></tr>
+        </tbody>
+      </table>
+      <p class="incl-label">General</p>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Dust lamps, shades &amp; picture frames</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Dust furniture, window sills &amp; vents</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean mirrors and all surfaces</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Vacuum, sweep &amp; mop all floors</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Empty trash &amp; replace liners</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Remove cobwebs</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Make beds (linen change on request)</div>
+      <hr class="tier-divider">
+      <p class="incl-label">Kitchen</p>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean appliance exteriors</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean microwave inside &amp; out</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Disinfect counters, backsplash &amp; sinks</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean table, chairs &amp; cabinet exteriors</div>
+      <div class="incl-row no"><svg class="chk chk-no" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".1"/><path d="M5.5 10.5l5-5M10.5 10.5l-5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>Inside fridge, oven, or cabinets</div>
+      <hr class="tier-divider">
+      <p class="incl-label">Bathroom</p>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Scrub tub, shower &amp; toilet</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean vanity, sinks &amp; faucets</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Fold &amp; hang towels neatly</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Heavy scrub of sinks, tub &amp; shower</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Heavy scrub of tile &amp; grout</div>
+      <hr class="tier-divider">
+      <p class="incl-label">Deep &amp; Move-Out Only</p>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Baseboards &amp; wall marks</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Doorframes &amp; light switches</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Heavy scrub of stovetop</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Interior windows (up to 10)</div>
+      <div class="incl-row no"><svg class="chk chk-no" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".1"/><path d="M5.5 10.5l5-5M10.5 10.5l-5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>Garage &amp; basement sweep</div>
+      <div class="addons-box">
+        <p class="addons-box-title">Available Add-Ons</p>
+        <div class="addon-line"><span>Inside oven</span><span>+$50</span></div>
+        <div class="addon-line"><span>Inside refrigerator</span><span>+$50</span></div>
+        <div class="addon-line"><span>Inside cabinets &amp; drawers</span><span>+$65</span></div>
+        <div class="addon-line"><span>Laundry (wash, dry &amp; fold)</span><span>+$20/load</span></div>
+      </div>
+      <a href="https://clienthub.getjobber.com/hubs/4ad0e7fe-b427-407f-9be5-d461f59fa8a8/public/requests/2537886/new" target="_blank" class="tier-btn featured-btn">Book a Deep Clean</a>
     </div>
-    <div class="svc-card">
-      <div class="svc-img"><div class="svc-img-placeholder"><span>DEEP CLEAN</span></div></div>
-      <div class="svc-body"><h3>Essential Deep Clean</h3><p>First-time clean or long-overdue reset. We go top to bottom and cover everything a standard clean misses.</p><div class="svc-price">Custom quote</div><a href="https://clienthub.getjobber.com/hubs/4ad0e7fe-b427-407f-9be5-d461f59fa8a8/public/requests/2537886/new" target="_blank" class="svc-btn">Book This Service</a></div>
+
+    <div class="tier-card">
+      <p class="tier-name">Move-In / Move-Out</p>
+      <p class="tier-time">4–6 hrs &middot; full property reset</p>
+      <p class="tier-from">From $239</p>
+      <p class="tier-from-label">*starting price, scales by home size</p>
+      <table class="price-tbl">
+        <thead><tr><th>Home size</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>1 bed / 1 bath</td><td>$239</td></tr>
+          <tr><td>2 bed / 1 bath</td><td>$299</td></tr>
+          <tr><td>2 bed / 2 bath</td><td>$349</td></tr>
+          <tr><td>3 bed / 2 bath</td><td>$419</td></tr>
+          <tr><td>3 bed / 3 bath</td><td>$489</td></tr>
+          <tr><td>4 bed / 2 bath</td><td>$459</td></tr>
+          <tr><td>4 bed / 3 bath</td><td>$519</td></tr>
+          <tr><td>4 bed / 4 bath</td><td>$579</td></tr>
+        </tbody>
+      </table>
+      <p class="incl-label">General</p>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Dust lamps, shades &amp; picture frames</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Dust furniture, window sills &amp; vents</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean mirrors and all surfaces</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Vacuum, sweep &amp; mop all floors</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Empty trash &amp; replace liners</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Remove cobwebs</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Make beds (linen change on request)</div>
+      <hr class="tier-divider">
+      <p class="incl-label">Kitchen</p>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean appliance exteriors</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean microwave inside &amp; out</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Disinfect counters, backsplash &amp; sinks</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean table, chairs &amp; cabinet exteriors</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean inside refrigerator</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean inside oven</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean inside all cabinets &amp; drawers</div>
+      <hr class="tier-divider">
+      <p class="incl-label">Bathroom</p>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Scrub tub, shower &amp; toilet</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Clean vanity, sinks &amp; faucets</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Fold &amp; hang towels neatly</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Heavy scrub of sinks, tub &amp; shower</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Heavy scrub of tile &amp; grout</div>
+      <hr class="tier-divider">
+      <p class="incl-label">Deep &amp; Move-Out Only</p>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Baseboards &amp; wall marks</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Doorframes &amp; light switches</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Heavy scrub of stovetop</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Interior windows (up to 10)</div>
+      <div class="incl-row"><svg class="chk chk-yes" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Garage &amp; basement sweep</div>
+      <div class="addons-box">
+        <p class="addons-box-title">Available Add-Ons</p>
+        <div class="addon-line"><span>Laundry (wash, dry &amp; fold)</span><span>+$20/load</span></div>
+      </div>
+      <a href="https://clienthub.getjobber.com/hubs/4ad0e7fe-b427-407f-9be5-d461f59fa8a8/public/requests/2537886/new" target="_blank" class="tier-btn">Book a Move-In/Out Clean</a>
     </div>
+
   </div>
-  <div class="addons">
-    <a href="https://clienthub.getjobber.com/hubs/4ad0e7fe-b427-407f-9be5-d461f59fa8a8/public/requests/2537886/new" target="_blank" class="addon"><div class="addon-name">Inside Oven</div><div class="addon-price">$50</div></a>
-    <a href="https://clienthub.getjobber.com/hubs/4ad0e7fe-b427-407f-9be5-d461f59fa8a8/public/requests/2537886/new" target="_blank" class="addon"><div class="addon-name">Inside Fridge</div><div class="addon-price">$50</div></a>
-    <a href="https://clienthub.getjobber.com/hubs/4ad0e7fe-b427-407f-9be5-d461f59fa8a8/public/requests/2537886/new" target="_blank" class="addon"><div class="addon-name">Laundry</div><div class="addon-price">$30/load</div></a>
-    <a href="https://clienthub.getjobber.com/hubs/4ad0e7fe-b427-407f-9be5-d461f59fa8a8/public/requests/2537886/new" target="_blank" class="addon"><div class="addon-name">Office Cleaning</div><div class="addon-price">Custom</div></a>
-  </div>
-</section>
- 
-<section class="process" id="process">
+</section><section class="process" id="process">
   <div class="section-label">How It Works</div>
   <div class="section-title">Simple from Day One</div>
   <div class="process-steps">
